@@ -11,7 +11,7 @@ order by 3,4;
 
 
 -- Total Cases vs Total Deaths
--- Shows likelihood of dying if you contract covid in Belgium
+-- Showing possibility of dying if getting Covid in Belgium
 
 Select Location, date, total_cases,total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 From PortfolioProject.coviddeath
@@ -19,7 +19,7 @@ Where location like '%Belgium%'
 order by 1,2;
 
 -- Total Cases vs Population
--- Shows what percentage of population infected with Covid (in Belgium)
+-- Showing the percentage of population infected with Covid (in Belgium)
 
 Select Location, date, Population, total_cases,  (total_cases/population)*100 as PercentPopulationInfected
 From PorfotlioProject.coviddeath
